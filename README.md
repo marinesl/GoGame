@@ -3,7 +3,7 @@
 ### Authors : 
 *Marine LANCELIN & François-Xavier BRESSON*
 
-### Repositories :
+### File Tree :
 - src : class
 - views : front views
 - web : front elements (css/fonts/images/js)

@@ -1,21 +1,24 @@
 <?php
 
+namespace MyGoGame\Stone;
+
 /**
  *
  */
 class Stone
 {
 
-  private $player;
-  private $positionX;
-  private $positionY;
+    private $player;
+    private $positionX;
+    private $positionY;
 
-  function __construct($player,$positionX,$positionY)
-  {
-    $this->player = $player;
-    $this->positionX = $positionX;
-    $this->positionY = $positionY;
-  }
+    function __construct($player,$positionX,$positionY)
+    {
+        $this->player = $player;
+        $this->positionX = $positionX;
+        $this->positionY = $positionY;
+    }
+
 }
 
 

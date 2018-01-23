@@ -3,3 +3,5 @@ https://getcomposer.org/download/
 
 Composer init
 Composer install
+
+A chaque modification du composer.json, refaire un composer install

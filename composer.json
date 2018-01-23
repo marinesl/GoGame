@@ -1,5 +1,6 @@
 {
     "name": "marinette/go-game",
+    "description": "Go Game in POO PHP",
     "authors": [
         {
             "name": "Marine Lancelin / François-Xavier Bresson",
@@ -8,9 +9,9 @@
     ],
     "require": {},
     "autoload": {
-        "GoGame": {
-            "src": "/src",
-            "web": "web"
+        "psr-4": {
+            "MyGoGame\\": "src/",
+            "tools\\": "vendor/" 
         }
     }
 }

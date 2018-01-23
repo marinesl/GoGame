@@ -1,13 +1,15 @@
 <?php
 
+namespace MyGoGame;
+
 /**
  *
  */
 class Goban
 {
 
-  private $board;
   private $size;
+  private $board;
 
   function __construct($size)
   {
@@ -25,6 +27,18 @@ class Goban
       }
     }
     return $array;
+  }
+
+  public function setSize($size) {
+      $this->size = $size;
+  }
+
+  public function getSize() {
+      return $this->size;
+  }
+
+  public function getBoard() {
+      return $this->board;
   }
 
 }

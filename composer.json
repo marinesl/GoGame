@@ -1,0 +1,16 @@
+{
+    "name": "marinette/go-game",
+    "authors": [
+        {
+            "name": "Marine Lancelin / François-Xavier Bresson",
+            "email": "lancelinmarine@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "GoGame": {
+            "src": "/src",
+            "web": "web"
+        }
+    }
+}

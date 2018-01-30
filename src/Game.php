@@ -27,8 +27,11 @@ class Game
      * Place the stone on the goban
      * Check around the stone
      * Score ++
+     * Change player
      */
-    public function play() {}
+    public function play() {
+        
+    }
 
     public function getPlayer1() {
         return $this->player1;

@@ -2,11 +2,6 @@
 
     require_once("vendor/autoload.php");
 
-    use MyGoGame\Game;
-
-    $game = new Game(13,"Name1","Name2");
-    $goban = $game->getGoban();
-
 ?>
 
 <!DOCTYPE html>
@@ -23,23 +18,23 @@
 <body>
 
     <header>
+        <img src="web/images/jeu-de-go.png" alt="jeu-de-go">
         <h1>GoGame</h1>
     </header>
 
     <main>
-        <table>
-            <?php
-                
-                for ($i = 0; $i < $goban->getSize(); $i++) { 
-                    echo "<tr>";
-                    for ($j = 0; $j < $goban->getSize(); $j++) { 
-                        echo "<td></td>";
-                    }
-                    echo "</tr>";
-                }
+        
+        <?php
+            $action = $_GET['action'];
 
-            ?>
-        </table>
+            if ($action == 'game') {
+                include_once('views/game.php');
+            }
+            else {
+                include_once('views/subscribe.php');
+            }
+        ?>
+
     </main>
 
     <footer>

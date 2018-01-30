@@ -1,3 +1,115 @@
-table td {
+/*
+ * Commun Style
+ */
+
+body {
+    height: 96vh;
+    position: relative;
+}
+
+header {
+    height: 200px;
+    text-align: center;
+}
+
+header img {
+    float: left;
+}
+
+header h1 {
+    font-size: 4em;
+    left: 45%;
+    margin: auto;
+    position: absolute;
+    top: 10%;
+}
+
+footer {
+    bottom: 0;
+    left: 45%;
+    position: absolute;
+}
+
+h2 {
+    font-size: 2em;
+    text-align: center;
+}
+
+
+/*
+ * Style Subscribe
+ */
+
+form {
+    text-align: center;
+}
+
+form div {
+    margin-top: 3%;
+}
+
+form div label {
+    font-size: 1.2em;
+}
+
+form div input[type="text"] {
+    font-size: 0.9em;
+    height: 25px;
+    width: 20%;
+}
+
+
+/*
+ * Style Game
+ */
+
+div#player1, div#player2, div#board {
+    display: inline-block;
+    position: relative;
+}
+
+div#player1, div#player2 {
+    width: 20vw;
+}
+
+div#board {
+    background-color: #F5CEA1;
+    width: 25vw;
+}
+
+div#board table {	
+    border-collapse: separate;
+    border-spacing: 0;
+    height: 280px;
+    margin: 5% auto;
+    width: 80%;
+}
+
+div#board table td {
     border: 1px solid #000;
+    position: relative;
+}
+
+div#board table td.hidden {
+    border: 1px solid transparent;
+}
+
+div#board table td:after {
+    content: '';
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 19px;
+    bottom: 50%;
+    height: 20px;
+    position: absolute;
+    right: 50%;
+    width: 22px;
+}
+
+div#board table td.white:after {
+    background-image: url('../images/white.svg');
+}
+
+div#board table td.black:after {
+    background-image: url('../images/black.svg');
 }

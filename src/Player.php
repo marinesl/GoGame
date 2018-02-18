@@ -34,6 +34,10 @@ class Player
         $this->score = $score;
     }
 
+    public function addToScore($score_to_add) {
+        $this->score += $score_to_add;
+    }
+
     public function getScore()
     {
         return $this->score;

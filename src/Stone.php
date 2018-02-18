@@ -8,15 +8,22 @@ namespace MyGoGame\Stone;
 class Stone
 {
 
-    private $player;
-    private $positionX;
-    private $positionY;
+    private $owner;
+    private $position;
 
-    function __construct($player,$positionX,$positionY)
+    function __construct($player, $position)
     {
-        $this->player = $player;
-        $this->positionX = $positionX;
-        $this->positionY = $positionY;
+        $this->owner = $player;
+        $this->position = $position;
+    }
+
+    public function swapOwner() {
+        $this->owner = $this->owner == 1 ? 2 : 1;
+    }
+
+
+    public function getOwner() {
+        return $this->owner;
     }
 
 }

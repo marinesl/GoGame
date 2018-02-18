@@ -70,7 +70,6 @@ class Game
         $is_taken = $is_taken_zone->isValidZone() ? true : false;
         $can_take = count($can_take_zones) ? true : false;
 
-
         if ($is_taken && !$can_take) {
             //Playing the stone at $position is illegal because it doesn't take an other player's zone, but it makes the other player take one from the current player
             return 'Illegal move';
@@ -80,13 +79,11 @@ class Game
             $this->playStone($position);
             foreach ($can_take_zones as $zone) {
                 $zone->swapOwner();
-                $this->{'player'+strval($this->currentPlayer)}->addToScore($zone->getSize);
+                $this->{'player'+strval($this->currentPlayer)}->addToScore($zone->getSize());
             }
-
         } elseif (!$is_taken && !$can_take) {
             //Nothing happens, the player can place their stone freely
             $this->playStone($position);
-
         }
 
         //End turn and change player

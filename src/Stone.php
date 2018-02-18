@@ -3,30 +3,47 @@
 namespace MyGoGame\Stone;
 
 /**
- *
+ * Defines a stone on the goban
  */
 class Stone
 {
-
+    /**
+     * @var int $owner      The numero of the owner of the stone
+     * @var int $position   The index of the cell in which the stone is located
+     */
     private $owner;
     private $position;
 
-    function __construct($player, $position)
+    /**
+     * __construct
+     *
+     * @param int $player   The numero of the owner of the stone
+     * @param int $position The index of the cell in which the stone is located
+     */
+    public function __construct($player, $position)
     {
         $this->owner = $player;
         $this->position = $position;
     }
 
-    public function swapOwner() {
+    /**
+     * Change the owner of the stone
+     *
+     * @return void
+     */
+    public function swapOwner()
+    {
         $this->owner = $this->owner == 1 ? 2 : 1;
     }
 
-
-    public function getOwner() {
+    /**
+     * Get the owner of the stone
+     *
+     * @return int
+     */
+    public function getOwner()
+    {
         return $this->owner;
     }
 
 }
-
-
-?>

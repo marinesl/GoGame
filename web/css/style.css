@@ -63,7 +63,7 @@ form div input[type="text"] {
  * Style Game
  */
 
-div#player1, div#player2, div#board {
+div#player1, div#player2, div#board, div#space {
     display: inline-block;
     position: relative;
 }
@@ -72,16 +72,22 @@ div#player1, div#player2 {
     width: 20vw;
 }
 
+div#space {
+    width: 16vw;
+}
+
 div#board {
     background-color: #F5CEA1;
     width: 25vw;
 }
 
-div#board table {	
+div#board table {
     border-collapse: separate;
     border-spacing: 0;
     height: 280px;
     margin: 5% auto;
+    padding-left: 5%;
+    padding-top: 5%;
     width: 80%;
 }
 
@@ -92,6 +98,7 @@ div#board table td {
 
 div#board table td.hidden {
     border: 1px solid transparent;
+    visibility: hidden;
 }
 
 div#board table td:after {
